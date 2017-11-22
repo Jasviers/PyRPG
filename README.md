@@ -1,10 +1,10 @@
-#PyRPG
+# PyRPG
 
 ## Introducción
 - Escribe tu nick de github en el pad.
 - Clona el repositorio.
 - Se debe crear una rama en este repositorio (branch <Nick>).
-- Crear carpeta src y en ella un fichero vacio __init__.py.
+- Crear carpeta src y en ella un fichero vacio \__init\__.py.
 - Crear ficheros criatura.py, guerrero.py, monstruo.py* y juego.py.
 - Implementa al menos lo que se pide.
 - Amplia todo lo que quieras tu juego.
@@ -21,7 +21,7 @@
 ### Metodos
 - Atacar(Criatura_Atacada): Realiza daño a la criatura atacada
 - Atacado(ATK): Recibe daño (HP -= criatura.ATK - DEF)
-- MostrarVida(): Muestra por pantalla la vida que tieney la total
+- MostrarVida(): Muestra por pantalla la vida que tiene y la total
 
 ## Clase Guerrero
 - Hereda de la clase Criaturas.

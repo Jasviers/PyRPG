@@ -1,6 +1,4 @@
 import criatura
-import monstruo
-import juego
 
 class Guerrero(criatura.Criatura):
 

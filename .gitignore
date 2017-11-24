@@ -1,0 +1,8 @@
+# Ignores Emacs backup files (any file ending with a tilde).
+
+*.~
+
+# Ignores the __pycache__ folder.
+
+src/__pycache__
+

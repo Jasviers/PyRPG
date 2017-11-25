@@ -1,13 +1,16 @@
 # Cambios a realizar
 
+##Arreglar Cosas
+
+- Problema de que el guerrero no tiene herencia y no entiendo el porque.
+
 ##Terminar cosas
 
-- Juego.py
-- Rehacer ATK
+- Juego.py **✔**
+- Rehacer ataque y atacado podria darse el caso de que consiguiera ganar vida.
 
 ##Añadir cosas
 
-- Añadir sistema de experiencia
-- Añadir mas monstruos
+- Añadir sistema de experiencia **✔**
 - Que cuando mates a un monstruo aparezca otro y asi hasta que muera el Guerrero
 - Añadir mas clases que no sean guerrero

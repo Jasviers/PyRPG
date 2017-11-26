@@ -2,12 +2,12 @@
 
 ##Arreglar Cosas
 
-- Problema de que el guerrero no tiene herencia y no entiendo el porque.
+- Problema de que el guerrero no tiene HP y no entiendo el porque.
 
 ##Terminar cosas
 
 - Juego.py **✔**
-- Rehacer ataque y atacado podria darse el caso de que consiguiera ganar vida.
+- Rehacer ataque y atacado, podria darse el caso de que consiguiera ganar vida.
 
 ##Añadir cosas
 

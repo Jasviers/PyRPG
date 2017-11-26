@@ -17,15 +17,15 @@ class Guerrero(criatura.Criatura):
         self.FU = 0
 
     def ganarFuria(self):
-        if self.ATK >= 3:
-            self.FU += 2
+        if self.ATK > 0:
+            self.FU += 10
         else:
             self.FU = self.FU
 
     def ganarExperiencia(self, Criatura_Atacada):
-        if (monstruo.HP == 0):
-            self.experiencia = 3
+        if (Criatura_Atacada.HP == 0):
+            self.experiencia += 3
 
     def ganarNiveles(self):
         if (self.experiencia == 9):
-            self.nivel = self.nivel + 1
+            self.nivel += 1

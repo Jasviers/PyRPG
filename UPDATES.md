@@ -2,7 +2,7 @@
 
 ##Arreglar Cosas
 
-- Errores de herencia :S
+- Errores de herencia, guerrero no tiene atributos **✔**
 
 ##Terminar cosas
 

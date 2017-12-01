@@ -1,31 +1,53 @@
 from monstruo import *
 from guererro import *
 from criatura import *
+import os
 
 
-guerrero = Guerrero(5,5,3,3,50,0,0,"Alumno")
-Monstruo_Generico = Monstruo(3,3,4,3,"Joaquín Erviti")
-print("Nombre= {} Nivel= {} Vida = {} Furia= {}".format(guerrero.nombre, guerrero.nivel, guerrero.hp, guerrero.fu))
-Monstruo_Generico.mostrarVida()
+guerrero = Guerrero(5,5,3,3,30,0,0,"Alumno")
+monstruo = Monstruo(3,3,4,3,"Joaquin Erviti")
 
-while(guerrero.hp > 0 or guerrero.hp > 0):
-    print("Nombre= {} Nivel= {} Vida = {} Furia= {}".format(guerrero.nombre, guerrero.nivel, guerrero.hp, guerrero.fu))
+while (monstruo.hp > 0 or guerrero.hp > 0):
+    print("")
+    print("Nombre = {}   Nivel = {}    Vida = {}    Furia = {}".format(guerrero.nombre, guerrero.nivel, guerrero.hp, guerrero.fu))
+    print("")
     print("1-> Ataque Normal")
     print("2-> Ataque Especial")
-    print("3-> Huir")
-    eleccion = input("Realiza tu elección")
+    print("3-> Huir y curarse")
+    print("")
+    eleccion = int(input("Realiza tu elección:....    "))
     if eleccion == 1:
-        guerrero.atacar(Monstruo_Generico)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        guerrero.atacar(monstruo)
+        monstruo.mostrarVida()
+        monstruo.atacar(guerrero)
         guerrero.ganarFuria()
-        guerrero.atacado(Monstruo_Generico.atk)
+        guerrero.ganarExperiencia()
+        guerrero.ganarNiveles()
+
     elif eleccion == 2:
-        guerrero.ataqueEspecial(Monstruo_Generico)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        guerrero.ataqueEspecial(monstruo)
+        monstruo.mostrarVida()
+        monstruo.atacar(guerrero)
         guerrero.ganarFuria()
-        guerrero.atacado(Monstruo_Generico.atk)
+        guerrero.ganarExperiencia()
+        guerrero.ganarNiveles()
 
     else:
-        guerrero.atacado(Monstruo_Generico.atk)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        guerrero.hp += 1
+        print ("Te has curado 1 punto de vida")
+        monstruo.atacar(guerrero)
         guerrero.mostrarVida()
-        print("¡Has huido con exito! ")
+        print("¡Has huido con exito!")
 
-print("Enemigo derrotado.")
+if (guerrero.hp <= 0):
+    print("")
+    print("--ALUMNO HA MUERTO. IGNORANTE--")
+    print("")
+
+elif (monstruo.hp <= 0):
+    print("")
+    print("--ERVITI HA MUERTO--")
+    print("")

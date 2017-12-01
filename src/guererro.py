@@ -1,30 +1,26 @@
-import criatura
+from criatura import Criatura
 
-class Guerrero(criatura.Criatura):
+class Guerrero(Criatura):
 
     def __init__(self, hp, hpTotal, atk, defe, fu, experiencia, nivel, nombre):
-        criatura.Criatura(hp, hpTotal, atk, defe, nombre)
-        self.fu         = fu
+        Criatura.__init__(self, hp, hpTotal, atk, defe, nombre)
+        self.fu          = fu
         self.experiencia = experiencia
-        self.nivel      = nivel
+        self.nivel       = nivel
 
     def ataqueEspecial(self, Criatura_Atacada):
-        if self.fu <= 30:
-            self.ataqueEspecial = criatura.Criatura.atacar
+        if self.fu < 30:
+            self.atacar(Criatura_Atacada)
         else:
-            self.ataqueEspecial =  1.5 * criatura.Criatura.atacar
+            Criatura_Atacada.atacado(self.atk)
         self.fu = 0
 
     def ganarFuria(self):
-        if self.atk > 0:
-            self.fu += 10
-        else:
-            self.fu = self.fu
+        self.fu += 10
 
-    def ganarExperiencia(self, Criatura_Atacada):
-        if (Criatura_Atacada.hp == 0):
-            self.experiencia += 3
+    def ganarExperiencia(self):
+        self.experiencia += 3
 
     def ganarNiveles(self):
-        if (self.experiencia == 9):
+        if (self.experiencia == 6):
             self.nivel += 1

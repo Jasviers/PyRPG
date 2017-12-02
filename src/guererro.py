@@ -1,4 +1,5 @@
 from criatura import Criatura
+from random import randint
 
 class Guerrero(Criatura):
 

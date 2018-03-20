@@ -13,4 +13,4 @@
 
 - Añadir sistema de experiencia **✔**
 - Que cuando mates a un monstruo aparezca otro y asi hasta que muera el Guerrero
-- Añadir mas clases que no sean guerrero
+- Añadir mas clases que no sean guerrero **✔**

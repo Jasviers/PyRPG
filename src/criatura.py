@@ -1,4 +1,4 @@
-from random import randint
+import random as rd
 
 class Criatura(object):
     def __init__(self, hp, hpTotal, atk, defe, nombre):
@@ -12,7 +12,7 @@ class Criatura(object):
         Criatura_Atacada.atacado(self.atk)
 
     def atacado(self, ataque_recibido):
-        dañoAtacado = (randint(0,ataque_recibido)) - (randint(0,self.defe))
+        dañoAtacado = (rd.randint(0,ataque_recibido)) - (rd.randint(0,self.defe))
         if dañoAtacado > 0:
             self.hp = self.hp - dañoAtacado
             print("{} recibe daño".format(self.nombre))
